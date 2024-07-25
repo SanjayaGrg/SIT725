@@ -14,12 +14,17 @@ app.get("/addTwoNumber", (req, res) => {
 });
 
 app.get("/Display", (req, res) => {
-    const n1 = "<html><body><H1>HELLO THERE </H1></body></html>";
+    const n1 = `<html>
+                    <body>
+                        <H1>HELLO THIS IS THE TASK OF WEEK 2</H1>
+                        <p>Hey this is just some random paragraph.</p>
+                    </body>
+                </html>`;
     res.set('Content-Type', 'text/html');
     res.send(Buffer.from(n1));
-})
-console.log(addTwoNumber(19, 12));
-const port = 3040;
+});
+
+const port = 3000;
 app.listen(port, () => {
-    console.log("hello i'm listening to port " + port);
+    console.log("I'm running on port: " + port);
 })
