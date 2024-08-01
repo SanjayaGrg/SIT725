@@ -1,0 +1,90 @@
+.nav-padding {
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+
+.navbar-css {
+    background-color: black;
+}
+
+/* container 1 profile */
+.container1 {
+    padding: 2rem;
+    padding-left: 8rem;
+    padding-right: 8rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    background-color: aliceblue;
+}
+
+.profileContainer {
+    height: 30rem;
+    align-content: center;
+}
+
+.profile-image {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    display: block;
+    margin: 0 auto;
+}
+
+/* container 2 profile */
+.container2 {
+    padding: 2rem;
+    padding-left: 8rem;
+    padding-right: 8rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    background-color: antiquewhite;
+}
+
+.image-con {
+    height: 30rem;
+    align-content: center;
+    text-align: center;
+}
+
+.imgStyle {
+    border-radius: 8px !important;
+    height: 26rem;
+}
+
+.desc-con {
+    border-color: blue;
+    height: 28rem;
+}
+
+.container3 {
+    padding: 2rem;
+    padding-left: 8rem;
+    padding-right: 8rem;
+    /* padding-top: 6rem;
+    padding-bottom: 6rem; */
+    background-color: aliceblue;
+}
+
+.card-con {
+    max-width: 250px;
+    /* overflow: hidden; */
+    border-radius: 10px;
+    height: 300px;
+}
+
+.card-css {
+    flex-direction: row;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    padding-left: 8rem;
+    padding-right: 8rem;
+}
+
+.card-image img {
+    width: 30rem;
+    max-height: 200px;
+    max-width: 350px;
+}
