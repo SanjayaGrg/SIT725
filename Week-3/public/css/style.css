@@ -40,7 +40,7 @@
     padding-right: 8rem;
     padding-top: 6rem;
     padding-bottom: 6rem;
-    background-color: antiquewhite;
+    background-color: white;
 }
 
 .image-con {
@@ -87,4 +87,23 @@
     width: 30rem;
     max-height: 200px;
     max-width: 350px;
+}
+
+.container4 {
+    padding: 2rem;
+    padding-left: 8rem;
+    padding-right: 8rem;
+    /* padding-top: 6rem;
+    padding-bottom: 6rem; */
+    background-color: white;
+}
+
+.formContainer {
+    /* border-width: 1px;
+    border-radius: 20px; */
+    margin: 20px;
+    /* border-color: black;
+    border-style: solid; */
+    padding-left: 50px;
+    text-align: center;
 }

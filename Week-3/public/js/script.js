@@ -49,13 +49,28 @@ const mappingData = () => {
                         </div>
                     </div>`
     )).join('');
-    console.log(cardsHTML, 'showing cards html for testing')
+    // console.log(cardsHTML, 'showing cards html for testing')
     cardContainer.innerHTML = cardsHTML;
 };
 
+const enquirySubmit = () => {
+    let formData = {};
+    formData.firstName = $('#first_name').val();
+    formData.lastName = $('#last_name').val();
+    formData.email = $('#email').val();
+    formData.message = $('#message').val();
+
+    console.log("Enquiry Data", formData);
+    alert("Your enquiry has been sent successfully!");
+}
+
 $(document).ready(function () {
     mappingData();
-    // $('.materialboxed').materialbox();
+    console.log("HELLO");
+    $('.modal').modal();
+    $('#submitEnquire').click(() => {
+        enquirySubmit();
+    })
     $('#clickMeButton').click(() => {
         // clickMe();
         $.ajax({
