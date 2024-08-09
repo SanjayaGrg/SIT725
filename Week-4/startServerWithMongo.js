@@ -2,7 +2,7 @@ let express = require('express');
 let app = express();
 const { MongoClient, ServerApiVersion } = require('mongodb');
 // const uri = "mongodb://localhost:27017";
-// const uri = "mongodb+srv://sanjaygurun155:PycKuH15bxaVyZVD@cluster0.u66wn0h.mongodb.net/"
+// const uri = "mongodb+srv://faisalalam:w7dwNuoISsPyESk8@cluster0.gngbcep.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 const uri = "mongodb+srv://sanjaygurun155:PycKuH15bxaVyZVD@cluster0.u66wn0h.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 let port = process.env.port || 3000;
 let collection;
@@ -23,40 +23,78 @@ const client = new MongoClient(uri, {
 async function runDBConnection() {
     try {
         await client.connect();
-        collection = client.db().collection('Cat');
+        projectCollection = client.db().collection('Projects');
+        enquiryCollection = client.db().collection('Enquiries');
         console.log(collection);
+        console.log("Connected to MongoDB");
     } catch (ex) {
         console.error(ex);
     }
 }
 
 app.get('/', function (req, res) {
-    res.render('indexMongo.html');
+    res.render('index.html');
 });
 
-app.get('/api/cats', (req, res) => {
-    getAllCats((err, result) => {
+//post projects
+app.post('/api/project', (req, res) => {
+    let project = req.body;
+    postProjects(project, (err, result) => {
         if (!err) {
-            res.json({ statusCode: 200, data: result, message: 'get all cats successful' });
+            res.json({ statusCode: 201, data: result, message: 'Project Submitted Successfully' });
+        } else {
+            res.status(500).json({ statusCode: 500, message: "Internal Server Error" });
+        }
+    });
+});
+//get projects
+app.get('/api/projects', (req, res) => {
+    getProjects((err, result) => {
+        if (!err) {
+            res.json({ statusCode: 200, data: result, message: 'get all projects successful' });
+        } else {
+            res.status(500).json({ statusCode: 500, message: "Internal Server Error" });
         }
     });
 });
 
-app.post('/api/cat', (req, res) => {
-    let cat = req.body;
-    postCat(cat, (err, result) => {
+//post enquiries
+app.post('/api/enquire', (req, res) => {
+    let enquiry = req.body;
+    postEnquiry(enquiry, (err, result) => {
         if (!err) {
-            res.json({ statusCode: 201, data: result, message: 'success' });
+            res.json({ statusCode: 201, data: result, message: 'Enquiry Submitted Successfully' });
+        } else {
+            res.status(500).json({ statusCode: 500, message: "Internal Server Error" });
         }
     });
 });
 
-function postCat(cat, callback) {
-    collection.insertOne(cat, callback);
+//get Enquiries
+app.get('/api/enquiries', (req, res) => {
+    getEnquiries((err, result) => {
+        if (!err) {
+            res.json({ statusCode: 200, data: result, message: 'get all enquiries successful' });
+        } else {
+            res.status(500).json({ statusCode: 500, message: "Internal Server Error" });
+        }
+    });
+});
+
+function postProjects(project, callback) {
+    projectCollection.insertOne(project, callback);
 }
 
-function getAllCats(callback) {
-    collection.find({}).toArray(callback);
+function getProjects(callback) {
+    projectCollection.find({}).toArray(callback);
+}
+
+function postEnquiry(enquiry, callback) {
+    enquiryCollection.insertOne(enquiry, callback);
+}
+
+function getEnquiries(callback) {
+    enquiryCollection.find({}).toArray(callback);
 }
 
 app.listen(port, () => {
