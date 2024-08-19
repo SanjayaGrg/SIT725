@@ -35,7 +35,7 @@ const addProjects = (items) => {
                             <span class="card-title grey-text text-darken-4">Description<i
                                     class="material-icons right">close</i></span>
                             <p class="card-text">${item?.description}</p>
-                            <p><a class="indigo-text" href=${item?.link}>Go to App</a></p>
+                            <p><a class="indigo-text" href=${item?.link} target="_blank">Go to App</a></p>
                         </div>
                         </div>
                     </div>`;
@@ -85,12 +85,12 @@ const enquirySubmit = () => {
 // implementing post api in th filling form for projects
 const projectForm = () => {
     let formData = {};
-    formData.title = $('#title').val(),
-        formData.image = $('#image').val(),
-        formData.link = $('#link').val(),
-        formData.description = $('#description').val(),
+    formData.title = $('#title').val();
+    formData.image = $('#image').val();
+    formData.link = $('#link').val();
+    formData.description = $('#description').val();
 
-        console.log("Projects Data", formData);
+    console.log("Projects Data", formData);
     postProject(formData);
     // alert("Your enquiry has been sent successfully!");
 }
@@ -114,7 +114,20 @@ function getAllEnquiries() {
     });
 }
 
+let socket = io();
+socket.on('number', (msg) => {
+    console.log('Random Number: ' + msg);
+});
+
+// document.addEventListener('DOMContentLoaded', function () {
+//     // Initialize modal
+//     var modals = document.querySelectorAll('.modal');
+//     M.Modal.init(modals);
+// });
+
+
 $(document).ready(function () {
+    console.log('testing blablalasd')
     $('.materialboxed').materialbox();
     $('#submitEnquire').click(() => {
         enquirySubmit();

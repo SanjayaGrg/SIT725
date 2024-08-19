@@ -2,10 +2,10 @@ let express = require('express');
 let app = express();
 const { MongoClient, ServerApiVersion } = require('mongodb');
 // const uri = "mongodb://localhost:27017";
-// const uri = "mongodb+srv://faisalalam:w7dwNuoISsPyESk8@cluster0.gngbcep.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 const uri = "mongodb+srv://sanjaygurun155:PycKuH15bxaVyZVD@cluster0.u66wn0h.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 let port = process.env.port || 3000;
-let collection;
+let projectCollection;
+let enquiryCollection;
 
 app.use(express.static(__dirname + '/public'))
 app.use(express.json());
@@ -25,7 +25,6 @@ async function runDBConnection() {
         await client.connect();
         projectCollection = client.db().collection('Projects');
         enquiryCollection = client.db().collection('Enquiries');
-        console.log(collection);
         console.log("Connected to MongoDB");
     } catch (ex) {
         console.error(ex);
@@ -51,7 +50,7 @@ app.post('/api/project', (req, res) => {
 app.get('/api/projects', (req, res) => {
     getProjects((err, result) => {
         if (!err) {
-            res.json({ statusCode: 200, data: result, message: 'get all projects successful' });
+            res.json({ statusCode: 200, data: result, message: 'Get all projects successful' });
         } else {
             res.status(500).json({ statusCode: 500, message: "Internal Server Error" });
         }
@@ -74,7 +73,7 @@ app.post('/api/enquire', (req, res) => {
 app.get('/api/enquiries', (req, res) => {
     getEnquiries((err, result) => {
         if (!err) {
-            res.json({ statusCode: 200, data: result, message: 'get all enquiries successful' });
+            res.json({ statusCode: 200, data: result, message: 'Get all enquiries successful' });
         } else {
             res.status(500).json({ statusCode: 500, message: "Internal Server Error" });
         }
