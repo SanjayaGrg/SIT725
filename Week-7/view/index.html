@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/styles.css" media="screen,projection" />
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+
+    <!--JavaScript at end of body for optimized loading-->
+
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper nav-padding navbar-css">
+                <a href="/" class="brand-logo">Portfolio</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#aboutMe">About Me</a></li>
+                    <li><a href="#myProjects">My Projects</a></li>
+                    <li><a href="#enquireMe">Enquire</a></li>
+                    <li><a href="/admin.html" target="_blank">Admin</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div id="searchContainer">
+        <input type="text" id="searchInput" placeholder="Search for a projects..." autocomplete="off" />
+        <ul id="suggestions"></ul>
+    </div>
+
+    <!-- Introduction -->
+    <main class="indigo.lighten-3">
+        <div class="container1">
+            <div class="row">
+                <div class="col s7">
+                    <h1 id="heading">Hi there,</h1>
+                    <p class="flow-text">I'am Sanjaya Kumar Gurung.</p>
+                    <p class="flow-text">A passionate Web Application Developer and Mobile Application Developer.</p>
+                    <a class="waves-effect waves-light btn" href="#aboutMe">About Me</a>
+                    <a class="waves-effect waves-light btn" href="#enquireMe">Enquire Me</a>
+                </div>
+                <div class="col s5 center">
+                    <div class="profileContainer">
+                        <img src="images/gif/68747470733a2f2f7777772e6c616d626461746573742e636f6d2f7265736f75726365732f696d616765732f6e65777332342e676966.gif"
+                            alt="GIF Image" class="profile-image" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Me -->
+        <div id="aboutMe" class="container2">
+            <div class="row">
+                <div class="col s12">
+                    <h2 class="center">About Me</h2>
+                </div>
+                <div class="col s5">
+                    <div class="image-con">
+                        <img src="images/image/profilePhoto.jpeg" class="imgStyle" alt="img" />
+                    </div>
+                </div>
+                <div class="col s7">
+                    <div class="desc-con">
+                        <h4>I'm Sanjaya</h4>
+                        <h5>Junior React Native Developer</h5>
+                        <p>I am a Junior React Native Developer. I graduated from Islington College (affiliated with
+                            London Metropolitan University) in Bsc. (Hons) Computing. I am currently pursuing Master's
+                            Degree in IT (professional) from Deakin University. I am very passionate about improving my
+                            coding skills and developing applications. I build Mobile Applications using React Native.
+                        </p>
+                        <p>Email: sanjaygurun.155@gmail.com</p>
+                        <p>Location: Melbourne, Australia</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="myProjects" class="container3">
+            <div class="row">
+                <div class="col s12">
+                    <h2 class="center">My Projects</h2>
+                </div>
+
+                <div id="projectCards" class="card-css">
+
+                </div>
+            </div>
+        </div>
+
+        <div id="enquireMe" class="container4">
+            <div class="row">
+                <div class="col s12">
+                    <h2 class="center">Enquire Me</h2>
+                </div>
+
+                <div class="row">
+                    <form class="formContainer col s12">
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input placeholder="Enter your first name" id="first_name" type="text" class="validate">
+                                <label for="first_name">First Name</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input placeholder="Enter your last name" id="last_name" type="text" class="validate">
+                                <label for="last_name">Last Name</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input placeholder="Enter your email" id="email" type="email" class="validate">
+                                <label for="email">Email</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input placeholder="Enter messages........" id="message" type="text"
+                                    class="validate desc-input" aria-multiline="true">
+                                <label for="message">Message</label>
+                            </div>
+                        </div>
+
+                        <a class="waves-effect waves-light btn" id="submitEnquire">Enquiry Submit</a>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="page-footer navbar-css">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Sanjaya's Portfolio</h5>
+                    <p class="grey-text text-lighten-4">Thank you for visiting my portfolio website. Connect with me
+                        over socials.</p>
+                </div>
+                <div class="col l3 s12">
+                    <h5 class="white-text">Quick Links</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="/">Home</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#aboutMe">About Me</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#myProjects">My Projects</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#enquireMe">Enquire</a></li>
+                    </ul>
+                </div>
+                <div class="col l3 s12">
+                    <h5 class="white-text">More Links</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="/">Contact Info</a></li>
+                        <li><a class="grey-text text-lighten-3" href="/projects.html">+61 450xxxxxx</a></li>
+                        <li><a class="grey-text text-lighten-3" href="/resume.html">sanjaygurun.155@gmail.com</a></li>
+                        <li><a class="grey-text text-lighten-3" href="/contact.html"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container center">
+                © 2024 Copyright Sanjaya. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <!-- <script type="text/javascript" src="js/script.js"></script> -->
+    <script type="text/javascript" src="js/scriptMongo.js"></script>
+    <!-- <script src="js/scriptMongo.js"></script> -->
+</body>
+
+</html>

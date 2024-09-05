@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/styles.css" media="screen,projection" />
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+
+    <!--JavaScript at end of body for optimized loading-->
+
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper nav-padding navbar-css">
+                <a href="/" class="brand-logo">Admin</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="/index.html">Portfolio</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- <div class="containerAdmin">
+        <div class="container">
+            <h3>Add New Project</h3>
+            <form id="projectForm">
+                <div class="input-field">
+                    <input id="title" type="text" class="validate">
+                    <label for="title">Project Title</label>
+                </div>
+                <div class="input-field">
+                    <input id="image" type="text" class="validate">
+                    <label for="image">Image Path</label>
+                </div>
+                <div class="input-field">
+                    <input id="link" type="text" class="validate">
+                    <label for="link">Project Link</label>
+                </div>
+                <div class="input-field">
+                    <textarea id="description" class="materialize-textarea"></textarea>
+                    <label for="description">Project Description</label>
+                </div>
+                <button type="submit" id="addProject" class="waves-effect waves-light btn">Add Project</button>
+            </form>
+        </div>
+    </div> -->
+
+    <div class="containerAdmin">
+        <div class="container">
+            <h3 class="admin-form-title">Add New Project</h3>
+            <form id="projectForm" class="admin-project-form">
+                <div class="input-field custom-input-field">
+                    <input id="title" type="text" class="validate custom-input">
+                    <label for="title">Project Title</label>
+                </div>
+                <div class="input-field custom-input-field">
+                    <input id="image" type="text" class="validate custom-input">
+                    <label for="image">Image Path</label>
+                </div>
+                <div class="input-field custom-input-field">
+                    <input id="link" type="text" class="validate custom-input">
+                    <label for="link">Project Link</label>
+                </div>
+                <div class="input-field custom-input-field">
+                    <textarea id="description" class="materialize-textarea custom-input"></textarea>
+                    <label for="description">Project Description</label>
+                </div>
+                <button type="submit" id="addProject" class="waves-effect waves-light btn custom-submit-btn">Add
+                    Project</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="page-footer navbar-css">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Admin</h5>
+                    <p class="grey-text text-lighten-4">Thank you for visiting my portfolio website. Connect with me
+                        over socials.</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container center">
+                © 2024 Copyright Sanjaya. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <!-- <script type="text/javascript" src="js/script.js"></script> -->
+    <script type="text/javascript" src="js/scriptMongo.js"></script>
+    <!-- <script src="js/scriptMongo.js"></script> -->
+</body>
+
+</html>
